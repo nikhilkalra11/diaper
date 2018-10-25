@@ -12,10 +12,10 @@ RSpec.feature "Organizations Admin" do
     fill_in "Short name", with: org_params[:short_name]
     fill_in "Url", with: org_params[:url]
     fill_in "Email", with: org_params[:email]
-    fill_in "Street", with: "1234 Banana Drive"
-    fill_in "City", with: "Boston"
-    select("MA", from: "State")
-    fill_in "Zipcode", with: "12345"
+    fill_in "Street", with: "1500 Remount Road"
+    fill_in "City", with: "Front Royal"
+    select("VA", from: "State")
+    fill_in "Zipcode", with: "22630"
 
     click_on "Save"
 
@@ -26,9 +26,9 @@ RSpec.feature "Organizations Admin" do
     end
 
     expect(page).to have_content(org_params[:name])
-    expect(page).to have_content("Banana")
-    expect(page).to have_content("Boston")
-    expect(page).to have_content("MA")
-    expect(page).to have_content("12345")
+    expect(page).to have_content("Remount")
+    expect(page).to have_content("Front Royal")
+    expect(page).to have_content("VA")
+    expect(page).to have_content("22630")
   end
 end

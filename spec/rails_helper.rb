@@ -129,18 +129,8 @@ RSpec.configure do |config|
     Geocoder.configure(lookup: :test)
 
     ["1500 Remount Road, Front Royal, VA",
-     "1111 Panda ave. Front Royal, VA 12345",
-     "Smithsonian Institute new",
-     "Smithsonian Conservation Center new",
-     "3700 O St NW, Washington, DC 20057",
-     "1500 Remount Road Front Royal, VA",
-     "1234 Banana Drive Boston, MA 12345",
-     "123 Donation Site Way",
-     "456 Donation Site Way",
-     "789 Donation Site Way",
-     "123 Location Way",
-     "456 Location Way",
-     "789 Location Way"].each do |address|
+     "Smithsonian Conservation Center"
+     ].each do |address|
       Geocoder::Lookup::Test.add_stub(
         address, [
           {
